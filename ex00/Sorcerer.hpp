@@ -10,7 +10,7 @@ class Sorcerer
 {
     std::string name;
     std::string title;
-protected:
+
     Sorcerer()
     {};
 public:
