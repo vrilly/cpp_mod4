@@ -10,11 +10,17 @@ int main()
     Victim jim("Jimmy");
     Peon joe("Joe");
     Hooman human("Bob");
+    Hooman nothuman("Disguised Alien");
 
     std::cout << robert << jim << joe << human;
 
     robert.polymorph(jim);
     robert.polymorph(joe);
     robert.polymorph(human);
+
+    std::cout << "Assignment test" << std::endl;
+    std::cout << human << nothuman;
+    human = nothuman;
+    std::cout << human << nothuman;
     return 0;
 }
