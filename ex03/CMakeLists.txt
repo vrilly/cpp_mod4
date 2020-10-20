@@ -1,0 +1,1 @@
+add_executable(ex03 main.cpp AMateria.cpp AMateria.hpp ICharacter.hpp IMateriaSource.hpp Ice.cpp Ice.hpp Cure.cpp Cure.hpp Character.cpp Character.hpp MateriaSource.cpp MateriaSource.hpp)
