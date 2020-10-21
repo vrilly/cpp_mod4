@@ -28,6 +28,13 @@ void Character::use(int idx, ICharacter &target)
         inventory[idx]->use(target);
 }
 
+Character::~Character()
+{
+    for (int i = 0; i < 4; i++)
+        if (inventory[i])
+            delete inventory[i];
+}
+
 Character::Character(const std::string &name)
     : name(name)
 {
@@ -37,6 +44,8 @@ Character::Character(const std::string &name)
 
 Character::Character(const Character &character)
 {
+    for (int i = 0; i < 4; i++)
+        inventory[i] = NULL;
     *this = character;
 }
 
