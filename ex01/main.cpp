@@ -5,22 +5,47 @@
 #include "RadScorpion.hpp"
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
+#include "Imposter.hpp"
+#include "EmergencyMeeting.hpp"
+#include "SuperMutant.hpp"
 
 int main()
 {
-    Character *me = new Character("me");
-    std::cout << *me;
-    Enemy *b = new RadScorpion();
-    AWeapon *pr = new PlasmaRifle();
-    AWeapon *pf = new PowerFist();
-    std::cout << *me;
-    me->equip(pr);
-    std::cout << *me;
-    me->equip(pf);
-    me->attack(b);
-    me->equip(pr);
-    std::cout << *me;
-    me->attack(b);
-    me->attack(b);
+    Character *active = new Character("Bob");
+    Character *backup = new Character("that one guy");
+
+    std::cout << *active;
+
+    Enemy *radscorpion = new RadScorpion;
+    Enemy *supermutant = new SuperMutant;
+    Enemy *imposter = new Imposter;
+
+    AWeapon *plasmarifle = new PlasmaRifle;
+    AWeapon *powerfist = new PowerFist;
+    AWeapon *emergencymeeting = new EmergencyMeeting;
+
+    active->attack(radscorpion);
+    std::cout << *active << std::endl;
+    active->equip(powerfist);
+    std::cout << *active << std::endl;
+    active->attack(imposter);
+    std::cout << *active << std::endl;
+    active->attack(radscorpion);
+    std::cout << *active << std::endl;
+    active->equip(plasmarifle);
+    std::cout << *active << std::endl;
+    active->attack(supermutant);
+    std::cout << *active << std::endl;
+    active->equip(emergencymeeting);
+    std::cout << *active << std::endl;
+    active->attack(imposter);
+    std::cout << *active << std::endl;
+
+    active = backup;
+    std::cout << *active << std::endl;
+    active->equip(emergencymeeting);
+    active->attack(imposter);
+    std::cout << *active << std::endl;
+    while (1);
     return (0);
 }

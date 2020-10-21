@@ -38,7 +38,11 @@ void Character::attack(Enemy *enemy)
 {
     if (!current_weapon)
         return;
-    std::cout << name << " attacks " << enemy->getType() << "with a "
+    if (current_weapon->getAPCost() > ap) {
+        std::cout << name << " has not enough AP for the attack" << std::endl;
+        return;
+    }
+    std::cout << name << " attacks " << enemy->getType() << " with a "
               << current_weapon->getName() << std::endl;
     current_weapon->attack();
     ap -= current_weapon->getAPCost();

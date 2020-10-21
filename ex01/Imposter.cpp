@@ -5,8 +5,10 @@
 
 void Imposter::takeDamage(int damage)
 {
-    if (damage < 9000)
+    if (damage < 9000) {
         Enemy::takeDamage(0);
+        std::cout << "The imposter did not take any damage! They only can be voted out with an emergency meeting!" << std::endl;
+    }
     else
         Enemy::takeDamage(damage);
 }
