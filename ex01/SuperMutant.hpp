@@ -10,7 +10,9 @@ class SuperMutant: public Enemy
     virtual void takeDamage(int damage);
 public:
     SuperMutant();
-    ~SuperMutant();
+    virtual ~SuperMutant();
+    SuperMutant(const SuperMutant &mutant);
+    SuperMutant &operator=(const SuperMutant &mutant);
 };
 
 

@@ -10,6 +10,9 @@ class PowerFist: public AWeapon
     virtual void attack() const;
 public:
     PowerFist();
+    virtual ~PowerFist() {};
+    PowerFist(const PowerFist &fist);
+    PowerFist &operator=(const PowerFist &fist);
 };
 
 

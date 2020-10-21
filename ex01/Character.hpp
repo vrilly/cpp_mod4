@@ -15,7 +15,7 @@ class Character
 public:
     Character(const std::string &name);
     Character(const Character &character);
-    ~Character();
+    virtual ~Character();
     Character &operator=(const Character &character);
     void recoverAP();
     void equip(AWeapon *weapon);

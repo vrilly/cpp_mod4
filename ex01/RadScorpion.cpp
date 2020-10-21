@@ -11,3 +11,14 @@ RadScorpion::~RadScorpion()
 {
     std::cout << "* SPROTCH *" << std::endl;
 }
+
+RadScorpion::RadScorpion(const RadScorpion &scorpion)
+{
+    *this = scorpion;
+}
+
+RadScorpion &RadScorpion::operator=(const RadScorpion &scorpion)
+{
+    (void)scorpion;
+    return *this;
+}

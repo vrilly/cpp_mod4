@@ -11,3 +11,14 @@ void PlasmaRifle::attack() const
 {
     std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }
+
+PlasmaRifle::PlasmaRifle(const PlasmaRifle &rifle)
+{
+    *this = rifle;
+}
+
+PlasmaRifle &PlasmaRifle::operator=(const PlasmaRifle &rifle)
+{
+    (void)rifle;
+    return *this;
+}

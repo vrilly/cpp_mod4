@@ -17,6 +17,8 @@ Enemy::~Enemy()
 
 Enemy &Enemy::operator=(const Enemy &enemy)
 {
+    if (this == &enemy)
+        return *this;
     hp = enemy.getHP();
     type = enemy.getType();
     return *this;

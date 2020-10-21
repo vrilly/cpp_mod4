@@ -10,3 +10,14 @@ PowerFist::PowerFist()
     : AWeapon("Power Fist", 8, 50)
 {
 }
+
+PowerFist::PowerFist(const PowerFist &fist)
+{
+    *this = fist;
+}
+
+PowerFist &PowerFist::operator=(const PowerFist &fist)
+{
+    (void)fist;
+    return *this;
+}
