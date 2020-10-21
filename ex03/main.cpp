@@ -17,9 +17,23 @@ int main()
     tmp = src->createMateria("cure");
     me->equip(tmp);
     ICharacter *bob = new Character("bob");
+    bob->equip(src->createMateria("cure"));
     me->use(0, *bob);
     me->use(1, *bob);
+    ICharacter *notbob = new Character(*(Character*)me);
+    *(Character *)notbob = *(Character *)bob; // deep copy
     delete bob;
+    notbob->use(0, *me);
+    IMateriaSource *src_copy = new MateriaSource();
+    *(MateriaSource *)src_copy = *(MateriaSource *)src; // deep copy
+    delete notbob;
+
+    notbob = new Character("Not Bob");
+    notbob->equip(src_copy->createMateria("ice"));
+    notbob->use(0, *me);
+    notbob->use(1, *me);
+
+    delete notbob;
     delete me;
     delete src;
     return 0;

@@ -35,6 +35,8 @@ MateriaSource::~MateriaSource()
 
 MateriaSource::MateriaSource(const MateriaSource &source)
 {
+    for (int i = 0; i < 4; i++)
+        storedMateria[i] = NULL;
     *this = source;
 }
 

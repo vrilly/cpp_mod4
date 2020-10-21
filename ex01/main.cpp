@@ -46,6 +46,5 @@ int main()
     active->equip(emergencymeeting);
     active->attack(imposter);
     std::cout << *active << std::endl;
-    while (1);
     return (0);
 }

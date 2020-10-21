@@ -3,6 +3,7 @@
 #include "TacticalMarine.hpp"
 #include "AssaultTerminator.hpp"
 #include "Squad.hpp"
+#include <cassert>
 
 int main()
 {
@@ -23,6 +24,13 @@ int main()
     }
     ISquad *copy = new Squad(*(Squad *) vlc);
     *assigntest = *copy;
+    for (int i = 0; i < assigntest->getCount(); ++i){
+        ISpaceMarine *cur = vlc->getUnit(i);
+        cur->battleCry();
+        cur->rangedAttack();
+        cur->meleeAttack();
+    }
+    assert(copy->getUnit(999) == NULL);
     delete vlc;
     delete copy;
     delete assigntest;
