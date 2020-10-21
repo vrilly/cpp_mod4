@@ -29,5 +29,6 @@ Imposter::Imposter(const Imposter &imposter)
 
 Imposter &Imposter::operator=(const Imposter &imposter)
 {
+    (void)imposter;
     return *this;
 }
