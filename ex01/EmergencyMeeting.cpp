@@ -20,5 +20,6 @@ EmergencyMeeting::EmergencyMeeting(const EmergencyMeeting &meeting)
 
 EmergencyMeeting &EmergencyMeeting::operator=(const EmergencyMeeting &meeting)
 {
+    (void)meeting;
     return *this;
 }
