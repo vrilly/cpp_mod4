@@ -2,7 +2,7 @@
 #include "Character.hpp"
 
 Character::Character(const std::string &name)
-    : name(name), ap(40)
+    : name(name), ap(40), current_weapon(NULL)
 {
 }
 
