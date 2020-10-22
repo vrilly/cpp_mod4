@@ -33,6 +33,9 @@ int main()
     notbob->use(0, *me);
     notbob->use(1, *me);
 
+    notbob->unequip(0);
+    notbob->use(0, *me);
+
     delete notbob;
     delete me;
     delete src;

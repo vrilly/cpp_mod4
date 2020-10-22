@@ -21,3 +21,7 @@ PowerFist &PowerFist::operator=(const PowerFist &fist)
     (void)fist;
     return *this;
 }
+PowerFist::~PowerFist()
+{
+
+}

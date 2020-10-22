@@ -10,6 +10,9 @@ class Cure: public AMateria
 {
 public:
     Cure();
+    virtual ~Cure();
+    Cure(const Cure &cure);
+    Cure &operator=(const Cure &cure);
     virtual void use(ICharacter &target);
     AMateria *clone() const;
 };

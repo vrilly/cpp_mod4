@@ -31,3 +31,7 @@ Hooman &Hooman::operator=(const Hooman &hooman)
     this->name = hooman.getName();
     return *this;
 }
+Hooman::Hooman()
+{
+
+}

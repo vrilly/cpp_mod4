@@ -46,3 +46,7 @@ void Sorcerer::polymorph(const Victim &victim)
 {
     victim.getPolymorphed();
 }
+Sorcerer::Sorcerer()
+{
+
+}

@@ -22,3 +22,7 @@ PlasmaRifle &PlasmaRifle::operator=(const PlasmaRifle &rifle)
     (void)rifle;
     return *this;
 }
+PlasmaRifle::~PlasmaRifle()
+{
+
+}

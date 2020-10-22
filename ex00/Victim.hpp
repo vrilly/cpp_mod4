@@ -9,10 +9,7 @@ class Victim
 {
 protected:
     std::string name;
-
-    Victim()
-    {}
-
+    Victim();
 public:
     const std::string &getName() const;
     Victim(const Victim &victim);

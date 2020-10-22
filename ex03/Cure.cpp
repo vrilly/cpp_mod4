@@ -17,3 +17,17 @@ void Cure::use(ICharacter &target)
     AMateria::use(target);
     std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
+Cure::Cure(const Cure &cure)
+    :AMateria(cure)
+{
+    *this = cure;
+}
+Cure &Cure::operator=(const Cure &cure)
+{
+    (void)cure;
+    return *this;
+}
+Cure::~Cure()
+{
+
+}

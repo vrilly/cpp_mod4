@@ -11,8 +11,7 @@ class AWeapon
     int apcost;
     int damage;
 protected:
-    AWeapon()
-    {};
+    AWeapon();
 public:
     AWeapon(const AWeapon &weapon);
     AWeapon(const std::string &name, int apcost, int damage);

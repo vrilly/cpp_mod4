@@ -38,3 +38,7 @@ AWeapon &AWeapon::operator=(const AWeapon &weapon)
     damage = weapon.getDamage();
     return *this;
 }
+AWeapon::AWeapon()
+{
+
+}

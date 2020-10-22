@@ -9,8 +9,7 @@ class Enemy
     int hp;
     std::string type;
 protected:
-    Enemy()
-    {};
+    Enemy();
 public:
     Enemy(const Enemy &enemy);
     Enemy(int hp, const std::string &type);

@@ -23,7 +23,7 @@ public:
     Squad();
     Squad(const Squad &squad);
     Squad &operator=(const Squad &squad);
-    ~Squad();
+    virtual ~Squad();
 };
 
 

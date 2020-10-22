@@ -46,5 +46,7 @@ int main()
     active->equip(emergencymeeting);
     active->attack(imposter);
     std::cout << *active << std::endl;
+    active->recoverAP();
+    std::cout << *active << std::endl;
     return (0);
 }

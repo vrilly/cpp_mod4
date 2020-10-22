@@ -1,5 +1,6 @@
 // Created by Tom Jans on 10/20/20.
 
+#include <iostream>
 #include "Character.hpp"
 
 const std::string &Character::getName() const
@@ -26,6 +27,8 @@ void Character::use(int idx, ICharacter &target)
 {
     if (inventory[idx])
         inventory[idx]->use(target);
+    else
+        std::cout << "No Weapon!" << std::endl;
 }
 
 Character::~Character()
@@ -63,4 +66,9 @@ Character &Character::operator=(const Character &character)
             inventory[i] = character.inventory[i]->clone();
     }
     return *this;
+}
+
+Character::Character()
+{
+
 }

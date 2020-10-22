@@ -6,8 +6,7 @@
 
 class Peon: public Victim
 {
-    Peon()
-    {};
+    Peon();
 public:
     Peon(const std::string &name);
     Peon(const Peon &peon);

@@ -11,8 +11,7 @@ class Sorcerer
     std::string name;
     std::string title;
 
-    Sorcerer()
-    {};
+    Sorcerer();
 public:
     const std::string &getName() const;
     const std::string &getTitle() const;

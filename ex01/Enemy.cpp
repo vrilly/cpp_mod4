@@ -42,3 +42,7 @@ void Enemy::takeDamage(int damage)
         hp = 0;
     hp -= damage;
 }
+Enemy::Enemy()
+{
+
+}

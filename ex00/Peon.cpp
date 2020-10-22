@@ -30,3 +30,7 @@ Peon &Peon::operator=(const Peon &peon)
     this->name = peon.getName();
     return *this;
 }
+Peon::Peon()
+{
+
+}

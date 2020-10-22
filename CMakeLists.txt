@@ -3,7 +3,7 @@ project(cpp_mod4)
 
 set(CMAKE_CXX_STANDARD 98)
 set(CMAKE_CXX_COMPILER "clang++")
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -std=c++98 -fsanitize=address")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -std=c++98 -g -fcoverage-mapping -fprofile-instr-generate")
 
 add_subdirectory(ex00)
 add_subdirectory(ex01)

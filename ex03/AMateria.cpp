@@ -38,3 +38,7 @@ void AMateria::use(ICharacter &target)
     xp += 10;
     (void) target;
 }
+AMateria::AMateria()
+{
+
+}

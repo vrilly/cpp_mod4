@@ -14,15 +14,12 @@ class AMateria
 private:
     unsigned int xp;
     std::string type;
-
-    AMateria()
-    {};
+    AMateria();
 public:
     AMateria(const std::string &type);
     AMateria(const AMateria &materia);
     AMateria &operator=(const AMateria &materia);
     virtual ~AMateria();
-
     const std::string &getType() const;
     unsigned int getXP() const;
     virtual AMateria *clone() const = 0;

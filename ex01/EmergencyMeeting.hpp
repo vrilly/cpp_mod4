@@ -11,7 +11,7 @@ class EmergencyMeeting: public AWeapon
     virtual void attack() const;
 public:
     EmergencyMeeting();
-    virtual ~EmergencyMeeting() {};
+    virtual ~EmergencyMeeting();
     EmergencyMeeting(const EmergencyMeeting &meeting);
     EmergencyMeeting &operator= (const EmergencyMeeting &meeting);
 };

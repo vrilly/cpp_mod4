@@ -8,8 +8,7 @@
 
 class Hooman: public Victim
 {
-    Hooman()
-    {};
+    Hooman();
 public:
     Hooman(const std::string &name);
     Hooman(const Hooman &hooman);
